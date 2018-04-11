@@ -1,0 +1,39 @@
+gse() {
+  prefix="e"
+  max_changes=20
+
+  gstatus="$(git status --porcelain)"
+  lines=(${(f)gstatus})
+  number_of_changes=${#lines}
+  files=()
+
+  if [ $number_of_changes -lt $max_changes -a $number_of_changes -gt 0 ]; then
+    f=1
+    for line in $lines; do
+      file=$(echo $line | sed "s/^...//g")
+      files+=($file)
+      export $prefix$f=$file
+      let f++
+    done
+
+    gstatus="$(git status -sb)"
+
+    for line in $gstatus; do
+      i=1
+      while [ $i -le $number_of_changes ]; do
+        search=${files[$i]}
+        replace="\033[2;37m[\033[1m\$$prefix$i\033[2;37m]\033[0m $search \033[2;37m[\033[1m$i\033[2;37m]\033[0m "
+        # fixes a case when a file contains another file as a substring)
+        line=${line/$search/$replace }   # Substitution for files with a space suffix.
+        line=${line/%$search/$replace}   # Substitution for files with a newline suffix.
+
+        let i++
+      done
+      echo -e $line
+    done
+  else
+    # If there are too many changed files, this 'gs' function will slow down.
+    # In this case, fall back to plain 'git status'
+    git status -sb
+  fi
+}
