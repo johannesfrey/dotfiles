@@ -1,0 +1,45 @@
+[submodule "vim/.vim/autoload/pathogen.vim"]
+	path = vim/.vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/.vim/bundle/gruvbox"]
+	path = vim/.vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/.vim/bundle/lightline.vim"]
+	path = vim/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/.vim/bundle/tmuxline.vim"]
+	path = vim/.vim/bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/.vim/bundle/vim-go"]
+	path = vim/.vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "vim/.vim/bundle/vim-dispatch"]
+	path = vim/.vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim/.vim/bundle/vim-matchit"]
+	path = vim/.vim/bundle/vim-matchit
+	url = https://github.com/adelarsq/vim-matchit
+[submodule "vim/.vim/bundle/vim-scriptease"]
+	path = vim/.vim/bundle/vim-scriptease
+	url = https://github.com/tpope/vim-scriptease
+[submodule "vim/.vim/bundle/vim-sensible"]
+	path = vim/.vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/bundle/vim-unimpaired"]
+	path = vim/.vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "tmux/.tmux/plugins/tmux-resurrect"]
+	path = tmux/.tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "vim/.vim/bundle/lightline-gruvbox.vim"]
+	path = vim/.vim/bundle/lightline-gruvbox.vim
+	url = https://github.com/shinchu/lightline-gruvbox.vim.git
+[submodule "pyenv/.pyenv"]
+	path = pyenv/.pyenv
+	url = https://github.com/pyenv/pyenv.git
