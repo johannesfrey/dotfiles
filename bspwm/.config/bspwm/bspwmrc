@@ -4,7 +4,7 @@ sxhkd &
 hsetroot -solid "#434C5E" &
 xrdb -merge $HOME/.Xresources &
 polybar nord &
-setxkbmap -layout us -option caps:swapescape &
+setxkbmap -layout us &
 xset r rate 250 75 &
 
 bspc monitor -d 1 2 3 4
