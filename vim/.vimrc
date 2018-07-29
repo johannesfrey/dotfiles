@@ -87,13 +87,13 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 "" themes and statuline
 set background=dark
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+let g:nord_italic=1
+let g:nord_italic_comments=1
+colorscheme nord
 
 set laststatus=2
 let g:lightline = {}
-let g:lightline.colorscheme='gruvbox'
+let g:lightline.colorscheme='nord'
 
 "" tmuxline
 let g:tmuxline_preset = {

@@ -37,3 +37,6 @@
 [submodule "pyenv/.pyenv"]
 	path = pyenv/.pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule "vim/.vim/bundle/nord-vim"]
+	path = vim/.vim/bundle/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
