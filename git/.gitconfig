@@ -34,3 +34,5 @@
 [user]
 	email = me@johannes-frey.de
 	name = Johannes Frey
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
