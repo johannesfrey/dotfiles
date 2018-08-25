@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/nord-vim"]
 	path = vim/.vim/bundle/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "z/z"]
+	path = z/z
+	url = https://github.com/rupa/z
