@@ -10,7 +10,7 @@ else
 fi
 
 git_branch() {
-  echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $($git symbolic-ref --short -q HEAD)
 }
 
 git_dirty() {
@@ -28,9 +28,9 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$($git symbolic-ref HEAD 2>/dev/null) || return
+ local ref=$($git symbolic-ref --short -q HEAD) || return
 # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
- echo "${ref#refs/heads/}"
+ echo "${ref}"
 }
 
 # This assumes that you always have an origin named `origin`, and that you only
@@ -39,7 +39,7 @@ git_prompt_info () {
 need_push () {
   if [ $($git rev-parse --is-inside-work-tree 2>/dev/null) ]
   then
-    number=$($git cherry -v origin/$(git symbolic-ref --short HEAD) 2>/dev/null | wc -l | bc)
+    number=$($git cherry -v origin/$(git symbolic-ref -q HEAD) 2>/dev/null | wc -l | bc)
 
     if [[ $number == 0 ]]
     then
