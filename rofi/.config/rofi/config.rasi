@@ -1,0 +1,118 @@
+configuration {
+	modi: 			"drun,run";
+	width: 			1000;
+	lines: 			18;
+	font: 			"Roboto Mono for Powerline 10.5";
+	show-match: 		false;
+	hide-scrollbar: 	true;
+	}
+
+* {
+    nord0:			 #2E3440;
+    nord1: 			 #3B4252;
+    nord2: 			 #434C5E;
+    nord3: 			 #4C566A;
+    nord4: 			 #D8DEE9;
+    nord5:  			 #E5E9F0;
+    nord6:  			 #ECEFF4;
+    nord7: 			 #8FBCBB;
+    nord8:   			 #88C0D0;
+    nord9:  			 #81A1C1;
+    nord10: 			 #5E81AC;
+    nord11: 			 #BF616A;
+    nord12: 			 #D08770;
+    nord13: 			 #EBCB8B;
+    nord14: 			 #A3BE8C;
+    nord15: 			 #B48EAD;
+
+    highlight:			#ff0000;
+
+    font-size: 1px;
+    border-color: @nord0;
+    background-color: @nord0;
+    text-color: @nord3;
+}
+
+#listview {
+    spacing: 0;
+    margin: 0;
+    dynamic: true;
+
+}
+
+#window {
+    background-color: @nord0;
+    padding: 0;
+    margin: 0;
+}
+
+#mainbox {
+    border: 4;
+    border-color:                @nord10;
+    padding: 0;
+    background-color: @highlight;
+    margin: 0;
+}
+
+#element {
+    padding: 2 0 2 4;
+    border: 0 0 0 0;
+    border-color: @highlight;
+    background-color: @nord0;
+    margin: 0;
+}
+
+#element.selected.normal {
+    background-color: @nord1;
+    text-color: @nord4;
+    border-radius: 0px;
+
+    border: 0 0 0 0;
+    border-color: @nord1;
+}
+
+#element.alternate.normal {
+    background-color: @nord0;
+}
+
+#element.normal.active {
+    background-color: @highlight;
+}
+
+#element.alternate.active {
+    background-color: @highlight;
+}
+
+#element.selected.active {
+    background-color: @highlight;
+    text-color: @highlight;
+    border-radius: 0px;
+    border: 0 0 0 0;
+    border-color: @highlight;
+}
+
+#inputbar {
+    border: 0 0 0 0;
+    margin: 0 -8 -2 0;
+    spacing: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-color: @highlight;
+}
+
+#prompt {
+    padding: 1 22 1 22;
+    background-color: @nord8;
+    border: 0 0 0 0;
+    text-color: @nord2;
+    margin: 0;
+}
+
+#entry {
+    padding: 1 0 0 9;
+    background-color: @nord3;
+    text-color: @nord4;
+    border: 0 0 0 0;
+    margin: 0;
+    spacing: 0 0 0 0;
+}
+
