@@ -1,5 +1,6 @@
 #! /bin/sh
 
+pkill sxhkd || true
 sxhkd &
 xsetroot -solid "#434C5E" &
 xrdb -merge $HOME/.Xresources &
