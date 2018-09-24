@@ -1,13 +1,13 @@
 #!/usr/bin/env zsh
 
-DIR="$(dirname $0)"
-DOTDIR_REL="${DIR}"/..
-DOTDIR_ABS="$(realpath ${DOTDIR_REL})"
+dir="$(dirname ${0})"
+dot_rel="${dir}"/..
+dot_abs="$(realpath ${dot_rel})"
 
-# jump to parent dir of .dotfiles
-pushd "${DOTDIR_REL}"/.. >/dev/null 2>&1
 # prepare stow to ignore *.zsh files
-ln -fs "${DOTDIR_ABS}"/.stow-global-ignore "${HOME}"
-popd >/dev/null 2>&1
+ln -fs "${dot_abs}"/.stow-global-ignore "${HOME}"
+
 # let stow create the symlinks
-stow *(/) -t "${HOME}"
+pushd "${dot_rel}" >/dev/null
+stow *(/)
+popd >/dev/null
