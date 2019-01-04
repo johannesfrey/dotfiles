@@ -11,6 +11,11 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+"italic fonts
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 "space as leader key
 nnoremap <Space> <Nop>
 let mapleader="\<Space>"
