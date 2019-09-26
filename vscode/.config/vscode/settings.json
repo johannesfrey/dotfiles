@@ -2,5 +2,6 @@
     "workbench.colorTheme": "Nord",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "go.useLanguageServer": true
 }
