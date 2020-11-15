@@ -34,7 +34,7 @@
 [user]
 	email = me@johannes-frey.de
 	name = Johannes Frey
-	signingkey = A77C405CA89F1E1F
+	signingkey = 37DE758DC116FCA8
 [credential]
 	helper = osxkeychain
 [commit]
